@@ -18,13 +18,6 @@ class Alojamiento:
         # Calcula el costo por persona redondeado a 2 decimales
         return round(self.precio / self.capacidad, 2)
 
-    # 2. precio_por_persona()
-
-    # Debe devolver el precio que corresponde pagar por persona.
-    # Si precio o capacidad no son válidos (capacidad o precio <= 0), 
-    # no debe lanzar error: debe devolver None.
-    # El resultado debe estar redondeado a 2 decimales.
-
 
 # Objeto 1
 casa = Alojamiento(
@@ -41,6 +34,20 @@ departamento = Alojamiento(
     1200,
     4
 )
+
+# información de la casa
+print(casa.mostrar_info())
+
+# precio por persona de la casa
+print("Precio por persona:", casa.precio_por_persona())
+
+print("-" * 40)
+
+# información del departamento
+print(departamento.mostrar_info())
+
+# precio por persona del departamento
+print("Precio por persona:", departamento.precio_por_persona())
 
 
 # Completa las instrucciones necesarias para:
