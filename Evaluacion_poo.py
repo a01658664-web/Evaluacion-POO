@@ -1,3 +1,4 @@
+# Alumno: Iker Reyes  Matrícula: A01658664
 class Alojamiento:
     # Clase para gestionar la información de un alojamiento
 
