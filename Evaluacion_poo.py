@@ -1,4 +1,6 @@
+# Alumno: Iker Reyes  Matrícula: A01658664
 class Alojamiento:
+    # Clase para gestionar la información de un alojamiento
 
     def __init__(self, nombre, tipo, precio, capacidad):
         self.nombre = nombre
@@ -7,26 +9,15 @@ class Alojamiento:
         self.capacidad = capacidad
 
     def mostrar_info(self):
-        # COMPLETAR
-        pass
-
-    # Reglas (léelas con atención, no son solo "rellenar")
-    # 1. mostrar_info()
-
-    # Debe devolver (no imprimir) una cadena de texto con la información
-    # del alojamiento, en un formato legible y consistente.
-    # El precio debe verse como moneda y la capacidad como número de personas.
+        # Devuelve la información formateada
+        return f"Alojamiento: {self.nombre} | Tipo: {self.tipo} | Precio: ${self.precio} | Capacidad: {self.capacidad} personas"
 
     def precio_por_persona(self):
-        # COMPLETAR
-        pass
-
-    # 2. precio_por_persona()
-
-    # Debe devolver el precio que corresponde pagar por persona.
-    # Si precio o capacidad no son válidos (capacidad o precio <= 0), 
-    # no debe lanzar error: debe devolver None.
-    # El resultado debe estar redondeado a 2 decimales.
+        # Devuelve None si los datos no son válidos
+        if self.precio <= 0 or self.capacidad <= 0:
+            return None
+        # Calcula el costo por persona redondeado a 2 decimales
+        return round(self.precio / self.capacidad, 2)
 
 
 # Objeto 1
@@ -44,6 +35,20 @@ departamento = Alojamiento(
     1200,
     4
 )
+
+# información de la casa
+print(casa.mostrar_info())
+
+# precio por persona de la casa
+print("Precio por persona:", casa.precio_por_persona())
+
+print("-" * 40)
+
+# información del departamento
+print(departamento.mostrar_info())
+
+# precio por persona del departamento
+print("Precio por persona:", departamento.precio_por_persona())
 
 
 # Completa las instrucciones necesarias para:
